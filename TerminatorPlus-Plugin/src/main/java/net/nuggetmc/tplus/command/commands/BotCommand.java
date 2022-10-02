@@ -56,7 +56,20 @@ public class BotCommand extends CommandInstance {
     public void root(CommandSender sender) {
         commandHandler.sendRootInfo(this, sender);
     }
-
+    @Command(
+            name = "togglePlace",
+            desc = "toggle whether bots can place blocks"
+    )
+    public void togglePlace() {
+        LegacyAgent.canPlace = !LegacyAgent.canPlace;
+    }
+    @Command(
+            name = "toggleMine",
+            desc = "toggle whether bots can mine"
+    )
+    public void toggleMine() {
+        LegacyAgent.canMine = !LegacyAgent.canMine;
+    }
     @Command(
             name = "create",
             desc = "Create a bot."

@@ -33,7 +33,7 @@ public class LegacyBlockCheck {
 
                 Block under = loc.clone().add(0, -1, 0).getBlock();
                 if (under.getType() == Material.LAVA) {
-                under.setType(Material.COBBLESTONE);
+                    under.setType(Material.COBBLESTONE);
                 }
             }
     }
